@@ -34,7 +34,7 @@ export function CopyHeading({
   const HeadingTag = `h${level}` as keyof JSX.IntrinsicElements;
   const sizeClasses =
     level === 2
-      ? "text-xl md:text-2xl font-bold mt-10 mb-4 pb-2 border-b border-black"
+      ? "text-xl md:text-2xl font-bold mt-10 mb-4 pb-2 border-b border-black dark:border-white"
       : level === 3
       ? "text-lg md:text-xl font-bold mt-6 mb-3"
       : "text-base font-bold mt-4 mb-2";
@@ -43,11 +43,11 @@ export function CopyHeading({
     <div className="group relative flex items-baseline justify-between gap-2">
       <HeadingTag
         id={id}
-        className={`scroll-mt-20 font-sans tracking-tight text-black flex items-center gap-2 ${sizeClasses} ${className}`}
+        className={`scroll-mt-20 font-sans tracking-tight text-black dark:text-white flex items-center gap-2 ${sizeClasses} ${className}`}
       >
         <span>{children}</span>
         {sourceRef && (
-          <span className="font-mono text-xs font-normal px-1.5 py-0.5 bg-gray-light text-black border border-black uppercase ml-2 inline-block">
+          <span className="font-mono text-xs font-normal px-1.5 py-0.5 bg-gray-light dark:bg-gray-dark text-black dark:text-white border border-black dark:border-white uppercase ml-2 inline-block">
             {sourceRef}
           </span>
         )}
@@ -57,7 +57,7 @@ export function CopyHeading({
         onClick={copyLink}
         title="Copy link to heading"
         aria-label={`Copy link to ${id}`}
-        className="opacity-0 group-hover:opacity-100 focus:opacity-100 p-1 border border-black bg-white hover:bg-black hover:text-white transition-opacity text-xs font-mono flex items-center gap-1 focus:outline focus:outline-2 focus:outline-black"
+        className="opacity-0 group-hover:opacity-100 focus:opacity-100 p-1 border border-black dark:border-white bg-white dark:bg-black text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-opacity text-xs font-mono flex items-center gap-1 focus:outline focus:outline-2 focus:outline-black dark:focus:outline-white"
       >
         {copied ? (
           <>

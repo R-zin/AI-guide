@@ -7,6 +7,13 @@
 :root {
   --background: #ffffff;
   --foreground: #000000;
+  color-scheme: light;
+}
+
+.dark {
+  --background: #000000;
+  --foreground: #ffffff;
+  color-scheme: dark;
 }
 
 * {
@@ -20,10 +27,25 @@ body {
   line-height: 1.6;
 }
 
+.dark body {
+  color: #ffffff;
+  background: #000000;
+}
+
 /* Accessibility focus ring */
 *:focus-visible {
   outline: 2px solid #000000 !important;
   outline-offset: 2px !important;
+}
+
+.dark *:focus-visible {
+  outline: 2px solid #ffffff !important;
+  outline-offset: 2px !important;
+}
+
+/* KaTeX formula contrast in dark mode */
+.dark .katex {
+  color: #ffffff !important;
 }
 
 /* Cap body line length at ~70ch for optimal reading */

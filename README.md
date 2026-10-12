@@ -10,6 +10,7 @@ An autonomous, static study guide website built with Next.js (App Router), TypeS
 - **Framework**: Next.js 14 (App Router, Static HTML Export `output: 'export'`)
 - **Language**: TypeScript (Strict mode)
 - **Styling**: Tailwind CSS (Minimalist, strictly #000000, #FFFFFF, and monochrome grays, zero border radius)
+- **Themes**: High-contrast Light and Dark mode with automatic OS preference detection, zero-flash inline script, localStorage persistence, and inverted crisp vector SVGs
 - **Math Engine**: KaTeX 0.16.11 (server-rendered & client-rehydrated LaTeX formulas)
 - **Icons**: Lucide React
 - **Validation**: Custom TypeScript AST validator (`scripts/validate-content.ts`)

@@ -4,7 +4,7 @@ import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import { chapters } from "../../content/chapters";
 import { glossaryItems } from "../../content/glossary";
-import { Search as SearchIcon, ArrowRight, Tag, BookOpen, HelpCircle, FileText } from "lucide-react";
+import { Search as SearchIcon, ArrowRight } from "lucide-react";
 import { FormattedText } from "../../components/MathRenderer";
 
 interface SearchResult {
@@ -128,14 +128,14 @@ export default function SearchPage() {
   return (
     <div className="prose-readable space-y-8">
       {/* Header */}
-      <header className="border-b border-black pb-6">
-        <div className="inline-block px-2.5 py-0.5 bg-black text-white font-mono text-xs uppercase tracking-wider mb-2">
+      <header className="border-b border-black dark:border-white pb-6">
+        <div className="inline-block px-2.5 py-0.5 bg-black dark:bg-white text-white dark:text-black font-mono text-xs uppercase tracking-wider mb-2">
           Knowledge Base Index
         </div>
-        <h1 className="text-2xl md:text-4xl font-bold font-sans text-black tracking-tight mb-2">
+        <h1 className="text-2xl md:text-4xl font-bold font-sans text-black dark:text-white tracking-tight mb-2">
           Full-Text Search
         </h1>
-        <p className="font-sans text-sm text-gray-dark leading-relaxed">
+        <p className="font-sans text-sm text-gray-dark dark:text-gray-light leading-relaxed">
           Search across all chapters, definitions, proofs, worked examples, practice problems, and glossary entries.
         </p>
       </header>
@@ -144,7 +144,7 @@ export default function SearchPage() {
       <section className="space-y-4">
         <div className="relative">
           <label htmlFor="search-input" className="sr-only">Search</label>
-          <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-black">
+          <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-black dark:text-white">
             <SearchIcon size={18} />
           </div>
           <input
@@ -154,23 +154,23 @@ export default function SearchPage() {
             placeholder="Type any topic (e.g. Mamdani, Skolem, Resolution, MYCIN, Defuzzification)..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full pl-11 pr-4 py-3 border border-black font-mono text-sm bg-white placeholder-gray-mid focus:outline focus:outline-2 focus:outline-black"
+            className="w-full pl-11 pr-4 py-3 border border-black dark:border-white font-mono text-sm bg-white dark:bg-black text-black dark:text-white placeholder-gray-mid focus:outline focus:outline-2 focus:outline-black dark:focus:outline-white"
           />
         </div>
 
         {/* Filter Type Pills */}
         <div className="flex flex-wrap items-center gap-2">
-          <span className="font-mono text-[10px] uppercase text-gray-dark mr-1">
+          <span className="font-mono text-[10px] uppercase text-gray-dark dark:text-gray-mid mr-1">
             Filter:
           </span>
           {typePills.map((type) => (
             <button
               key={type}
               onClick={() => setFilterType(type)}
-              className={`px-2.5 py-1 text-xs font-mono border border-black transition-colors ${
+              className={`px-2.5 py-1 text-xs font-mono border border-black dark:border-white transition-colors ${
                 filterType === type
-                  ? "bg-black text-white font-bold"
-                  : "bg-white text-black hover:bg-gray-light"
+                  ? "bg-black text-white dark:bg-white dark:text-black font-bold"
+                  : "bg-white text-black dark:bg-black dark:text-white hover:bg-gray-light dark:hover:bg-gray-dark"
               }`}
             >
               {type === "all" ? "All Content" : `${type}s`}
@@ -181,9 +181,9 @@ export default function SearchPage() {
 
       {/* Results Header */}
       {query.trim() !== "" && (
-        <div className="p-3 border border-black bg-gray-light/30 font-mono text-xs flex items-center justify-between">
-          <span>Search query: <strong className="text-black">&quot;{query}&quot;</strong></span>
-          <span>Matches: <strong className="text-black">{filteredResults.length}</strong></span>
+        <div className="p-3 border border-black dark:border-white bg-gray-light/30 dark:bg-gray-black font-mono text-xs flex items-center justify-between text-black dark:text-white">
+          <span>Search query: <strong>&quot;{query}&quot;</strong></span>
+          <span>Matches: <strong>{filteredResults.length}</strong></span>
         </div>
       )}
 
@@ -192,16 +192,16 @@ export default function SearchPage() {
         {query.trim() === "" ? (
           <div className="p-12 border border-dashed border-gray-mid text-center space-y-3">
             <SearchIcon size={28} className="mx-auto text-gray-mid" />
-            <p className="font-mono text-xs text-gray-dark">
+            <p className="font-mono text-xs text-gray-dark dark:text-gray-mid">
               Enter a search keyword above to explore topics across the entire curriculum.
             </p>
             <div className="pt-2 flex flex-wrap justify-center gap-2 font-mono text-[11px]">
-              <span className="text-gray-dark">Popular searches:</span>
+              <span className="text-gray-dark dark:text-gray-mid">Popular searches:</span>
               {["Mamdani", "Skolemization", "MYCIN", "Centroid", "Prolog", "Modus Ponens", "Weighted Average"].map((s) => (
                 <button
                   key={s}
                   onClick={() => setQuery(s)}
-                  className="px-2 py-0.5 border border-black bg-white hover:bg-black hover:text-white transition-colors"
+                  className="px-2 py-0.5 border border-black dark:border-white bg-white dark:bg-black text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
                 >
                   {s}
                 </button>
@@ -209,7 +209,7 @@ export default function SearchPage() {
             </div>
           </div>
         ) : filteredResults.length === 0 ? (
-          <div className="p-10 border border-dashed border-gray-mid text-center font-mono text-xs text-gray-dark">
+          <div className="p-10 border border-dashed border-gray-mid text-center font-mono text-xs text-gray-dark dark:text-gray-mid">
             No results found matching &quot;{query}&quot;. Try broadening your keywords.
           </div>
         ) : (
@@ -217,33 +217,33 @@ export default function SearchPage() {
             <Link
               key={res.id}
               href={res.url}
-              className="block p-5 border border-black bg-white hover:bg-gray-light/10 transition-colors group focus:outline focus:outline-2 focus:outline-black"
+              className="block p-5 border border-black dark:border-white bg-white dark:bg-black hover:bg-gray-light/10 dark:hover:bg-gray-black transition-colors group focus:outline focus:outline-2 focus:outline-black dark:focus:outline-white"
             >
               <div className="flex flex-wrap items-baseline justify-between gap-2 mb-2">
                 <div className="flex items-center gap-2">
-                  <span className="font-mono text-[10px] font-bold px-1.5 py-0.5 bg-black text-white uppercase">
+                  <span className="font-mono text-[10px] font-bold px-1.5 py-0.5 bg-black dark:bg-white text-white dark:text-black uppercase">
                     {res.type}
                   </span>
                   {res.chapterBadge && (
-                    <span className="font-mono text-[11px] font-bold text-gray-dark">
+                    <span className="font-mono text-[11px] font-bold text-gray-dark dark:text-gray-mid">
                       {res.chapterBadge}
                     </span>
                   )}
                 </div>
-                <span className="font-mono text-[10px] px-1.5 py-0.5 border border-black bg-gray-light text-black">
+                <span className="font-mono text-[10px] px-1.5 py-0.5 border border-black dark:border-white bg-gray-light dark:bg-gray-dark text-black dark:text-white">
                   {res.sourceRef}
                 </span>
               </div>
 
-              <h3 className="font-sans text-base font-bold text-black group-hover:underline mb-1">
+              <h3 className="font-sans text-base font-bold text-black dark:text-white group-hover:underline mb-1">
                 {res.title}
               </h3>
 
-              <p className="font-sans text-xs md:text-sm text-gray-dark leading-relaxed line-clamp-2">
+              <p className="font-sans text-xs md:text-sm text-gray-dark dark:text-gray-light leading-relaxed line-clamp-2">
                 <FormattedText text={res.preview} />
               </p>
 
-              <div className="mt-3 flex items-center gap-1 font-mono text-xs font-bold text-black">
+              <div className="mt-3 flex items-center gap-1 font-mono text-xs font-bold text-black dark:text-white">
                 <span>View Content</span>
                 <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
               </div>

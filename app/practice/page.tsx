@@ -36,24 +36,24 @@ export default function PracticePage() {
   return (
     <div className="prose-readable space-y-8">
       {/* Header */}
-      <header className="border-b border-black pb-6">
-        <div className="inline-block px-2.5 py-0.5 bg-black text-white font-mono text-xs uppercase tracking-wider mb-2">
+      <header className="border-b border-black dark:border-white pb-6">
+        <div className="inline-block px-2.5 py-0.5 bg-black dark:bg-white text-white dark:text-black font-mono text-xs uppercase tracking-wider mb-2">
           Interactive Assessment Bank
         </div>
-        <h1 className="text-2xl md:text-4xl font-bold font-sans text-black tracking-tight mb-2">
+        <h1 className="text-2xl md:text-4xl font-bold font-sans text-black dark:text-white tracking-tight mb-2">
           Practice Questions
         </h1>
-        <p className="font-sans text-sm text-gray-dark leading-relaxed">
+        <p className="font-sans text-sm text-gray-dark dark:text-gray-light leading-relaxed">
           Full collection of practice exercises across all 5 course modules. Filter by topic, difficulty tier, or completion status to focus your revision.
         </p>
 
         {/* Stats bar */}
-        <div className="mt-4 p-3 border border-black bg-gray-light/30 flex flex-wrap items-center justify-between gap-4 font-mono text-xs">
+        <div className="mt-4 p-3 border border-black dark:border-white bg-gray-light/30 dark:bg-gray-black flex flex-wrap items-center justify-between gap-4 font-mono text-xs text-black dark:text-white">
           <div>
-            Total Questions: <span className="font-bold text-black">{allQuestions.length}</span>
+            Total Questions: <span className="font-bold">{allQuestions.length}</span>
           </div>
           <div>
-            Showing: <span className="font-bold text-black">{filteredQuestions.length}</span>
+            Showing: <span className="font-bold">{filteredQuestions.length}</span>
           </div>
           <div className="flex items-center gap-1 font-bold">
             <CheckSquare size={14} /> Mastered: {understoodQuestions.length} / {allQuestions.length}
@@ -62,8 +62,8 @@ export default function PracticePage() {
       </header>
 
       {/* Filter Controls */}
-      <section className="p-4 border border-black bg-white space-y-4">
-        <div className="flex items-center gap-2 font-mono text-xs font-bold uppercase text-black">
+      <section className="p-4 border border-black dark:border-white bg-white dark:bg-black space-y-4">
+        <div className="flex items-center gap-2 font-mono text-xs font-bold uppercase text-black dark:text-white">
           <Filter size={14} />
           <span>Filter Questions</span>
         </div>
@@ -71,14 +71,14 @@ export default function PracticePage() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono text-xs">
           {/* Chapter Filter */}
           <div>
-            <label htmlFor="ch-filter" className="block text-gray-dark uppercase text-[10px] mb-1">
+            <label htmlFor="ch-filter" className="block text-gray-dark dark:text-gray-mid uppercase text-[10px] mb-1">
               Filter by Chapter
             </label>
             <select
               id="ch-filter"
               value={selectedChapter}
               onChange={(e) => setSelectedChapter(e.target.value)}
-              className="w-full p-2 border border-black bg-white focus:outline focus:outline-2 focus:outline-black text-xs font-mono"
+              className="w-full p-2 border border-black dark:border-white bg-white dark:bg-black text-black dark:text-white focus:outline focus:outline-2 focus:outline-black dark:focus:outline-white text-xs font-mono"
             >
               <option value="all">All Chapters (5)</option>
               {chapters.map((ch) => (
@@ -91,14 +91,14 @@ export default function PracticePage() {
 
           {/* Difficulty Filter */}
           <div>
-            <label htmlFor="diff-filter" className="block text-gray-dark uppercase text-[10px] mb-1">
+            <label htmlFor="diff-filter" className="block text-gray-dark dark:text-gray-mid uppercase text-[10px] mb-1">
               Difficulty Tier
             </label>
             <select
               id="diff-filter"
               value={selectedDifficulty}
               onChange={(e) => setSelectedDifficulty(e.target.value)}
-              className="w-full p-2 border border-black bg-white focus:outline focus:outline-2 focus:outline-black text-xs font-mono"
+              className="w-full p-2 border border-black dark:border-white bg-white dark:bg-black text-black dark:text-white focus:outline focus:outline-2 focus:outline-black dark:focus:outline-white text-xs font-mono"
             >
               <option value="all">All Difficulties</option>
               <option value="Easy">Easy</option>
@@ -109,14 +109,14 @@ export default function PracticePage() {
 
           {/* Completion Filter */}
           <div>
-            <label htmlFor="status-filter" className="block text-gray-dark uppercase text-[10px] mb-1">
+            <label htmlFor="status-filter" className="block text-gray-dark dark:text-gray-mid uppercase text-[10px] mb-1">
               Progress Status
             </label>
             <select
               id="status-filter"
               value={filterUnderstood}
               onChange={(e) => setFilterUnderstood(e.target.value)}
-              className="w-full p-2 border border-black bg-white focus:outline focus:outline-2 focus:outline-black text-xs font-mono"
+              className="w-full p-2 border border-black dark:border-white bg-white dark:bg-black text-black dark:text-white focus:outline focus:outline-2 focus:outline-black dark:focus:outline-white text-xs font-mono"
             >
               <option value="all">All Questions</option>
               <option value="pending">Needs Review (Unmarked)</option>
@@ -129,7 +129,7 @@ export default function PracticePage() {
       {/* Questions List */}
       <section className="space-y-6">
         {filteredQuestions.length === 0 ? (
-          <div className="p-8 border border-dashed border-gray-mid text-center font-mono text-xs text-gray-dark">
+          <div className="p-8 border border-dashed border-gray-mid text-center font-mono text-xs text-gray-dark dark:text-gray-mid">
             No practice questions matched your current filter selection.
           </div>
         ) : (
