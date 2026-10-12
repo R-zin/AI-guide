@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <text x="400" y="30" font-family="Inter, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#000000">PARTICIPANTS & ARCHITECTURE IN EXPERT SYSTEM DESIGN</text>
+  
+  <!-- Domain Expert -->
+  <rect x="40" y="60" width="140" height="60" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <text x="110" y="88" font-family="Inter, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#000000">Domain Expert</text>
+  <text x="110" y="105" font-family="Inter, sans-serif" font-size="11" text-anchor="middle" fill="#444444">(Source of Knowledge)</text>
+  
+  <!-- Knowledge Engineer -->
+  <rect x="40" y="180" width="140" height="60" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <text x="110" y="208" font-family="Inter, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#000000">Knowledge Engineer</text>
+  <text x="110" y="225" font-family="Inter, sans-serif" font-size="11" text-anchor="middle" fill="#444444">(Models Knowledge)</text>
+  
+  <!-- User -->
+  <rect x="340" y="60" width="140" height="60" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <text x="410" y="88" font-family="Inter, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#000000">User</text>
+  <text x="410" y="105" font-family="Inter, sans-serif" font-size="11" text-anchor="middle" fill="#444444">(Queries & Problems)</text>
+  
+  <!-- System Engineer / Programmer -->
+  <rect x="620" y="120" width="140" height="60" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <text x="690" y="148" font-family="Inter, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#000000">System Engineer /</text>
+  <text x="690" y="165" font-family="Inter, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#000000">Programmer</text>
+  
+  <!-- User Interface -->
+  <rect x="340" y="180" width="140" height="60" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <text x="410" y="215" font-family="Inter, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#000000">User Interface</text>
+  
+  <!-- Inference Engine -->
+  <rect x="330" y="290" width="160" height="60" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+  <text x="410" y="325" font-family="Inter, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#000000">Inference Engine</text>
+  
+  <!-- Knowledge Base -->
+  <rect x="180" y="410" width="160" height="60" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <text x="260" y="445" font-family="Inter, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#000000">Knowledge Base</text>
+  
+  <!-- Working Storage -->
+  <rect x="480" y="410" width="160" height="60" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <text x="560" y="445" font-family="Inter, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#000000">Working Storage</text>
+  
+  <!-- Arrows -->
+  <line x1="110" y1="120" x2="110" y2="180" stroke="#000000" stroke-width="1.5"/>
+  <polygon points="110,180 106,172 114,172" fill="#000000"/>
+  
+  <line x1="110" y1="240" x2="220" y2="410" stroke="#000000" stroke-width="1.5"/>
+  <polygon points="220,410 212,404 220,398" fill="#000000"/>
+  
+  <!-- User <-> UI -->
+  <line x1="395" y1="120" x2="395" y2="180" stroke="#000000" stroke-width="1.5"/>
+  <polygon points="395,180 391,172 399,172" fill="#000000"/>
+  
+  <line x1="425" y1="180" x2="425" y2="120" stroke="#000000" stroke-width="1.5"/>
+  <polygon points="425,120 421,128 429,128" fill="#000000"/>
+  
+  <!-- System Engineer <-> User & UI -->
+  <line x1="620" y1="140" x2="480" y2="90" stroke="#000000" stroke-width="1.5"/>
+  <line x1="620" y1="160" x2="480" y2="200" stroke="#000000" stroke-width="1.5"/>
+  
+  <!-- UI <-> Inference Engine -->
+  <line x1="410" y1="240" x2="410" y2="290" stroke="#000000" stroke-width="1.5"/>
+  <polygon points="410,240 406,248 414,248" fill="#000000"/>
+  <polygon points="410,290 406,282 414,282" fill="#000000"/>
+  
+  <!-- Inference Engine <-> KB -->
+  <line x1="360" y1="350" x2="280" y2="410" stroke="#000000" stroke-width="1.5"/>
+  <polygon points="360,350 366,358 372,350" fill="#000000"/>
+  <polygon points="280,410 286,402 274,402" fill="#000000"/>
+  
+  <!-- Inference Engine <-> Working Storage -->
+  <line x1="460" y1="350" x2="540" y2="410" stroke="#000000" stroke-width="1.5"/>
+  <polygon points="460,350 452,352 458,360" fill="#000000"/>
+  <polygon points="540,410 546,402 534,402" fill="#000000"/>
+</svg>

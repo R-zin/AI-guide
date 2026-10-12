@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 450" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <rect x="20" y="20" width="710" height="410" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  
+  <text x="375" y="45" font-family="Inter, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#000000">Figure 8.2: First-Order Logic Domain Model with Objects, Relations, and Functions</text>
+  
+  <!-- Richard Person Circle -->
+  <ellipse cx="230" cy="240" rx="100" ry="120" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <text x="160" y="150" font-family="Inter, sans-serif" font-size="13" font-style="italic" fill="#000000">person</text>
+  <!-- Richard stick figure & box -->
+  <circle cx="230" cy="180" r="22" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <circle cx="222" cy="175" r="2" fill="#000000"/>
+  <circle cx="238" cy="175" r="2" fill="#000000"/>
+  <path d="M 222 188 Q 230 196 238 188" stroke="#000000" stroke-width="1.5" fill="none"/>
+  <!-- Body box R -->
+  <rect x="205" y="202" width="50" height="50" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <text x="230" y="238" font-family="Inter, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#000000">R</text>
+  <!-- Arms & Legs -->
+  <line x1="205" y1="215" x2="160" y2="245" stroke="#000000" stroke-width="1.5"/>
+  <line x1="255" y1="215" x2="290" y2="245" stroke="#000000" stroke-width="1.5"/>
+  <line x1="215" y1="252" x2="195" y2="305" stroke="#000000" stroke-width="1.5"/>
+  <line x1="245" y1="252" x2="265" y2="305" stroke="#000000" stroke-width="1.5"/>
+  
+  <!-- Richard Left Leg function object -->
+  <ellipse cx="320" cy="385" rx="30" ry="20" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <path d="M 310 375 L 320 395 L 332 390" stroke="#000000" stroke-width="1.5" fill="none"/>
+  <!-- Arrow function LeftLeg(Richard) -->
+  <line x1="270" y1="310" x2="305" y2="370" stroke="#000000" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <polygon points="305,370 298,364 306,360" fill="#000000"/>
+  <text x="315" y="335" font-family="Inter, sans-serif" font-size="11" fill="#000000">left leg</text>
+  
+  <!-- King John Person Circle -->
+  <ellipse cx="500" cy="250" rx="100" ry="130" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <text x="590" y="150" font-family="Inter, sans-serif" font-size="13" font-style="italic" fill="#000000">person</text>
+  <text x="590" y="170" font-family="Inter, sans-serif" font-size="13" font-style="italic" fill="#000000">king</text>
+  <!-- John face -->
+  <circle cx="500" cy="190" r="22" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <circle cx="492" cy="185" r="2" fill="#000000"/>
+  <circle cx="508" cy="185" r="2" fill="#000000"/>
+  <path d="M 492 200 Q 500 192 508 200" stroke="#000000" stroke-width="1.5" fill="none"/>
+  <!-- Body box J -->
+  <rect x="475" y="212" width="50" height="50" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <text x="500" y="248" font-family="Inter, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#000000">J</text>
+  <!-- Arms & Legs -->
+  <line x1="475" y1="225" x2="435" y2="245" stroke="#000000" stroke-width="1.5"/>
+  <line x1="525" y1="225" x2="555" y2="245" stroke="#000000" stroke-width="1.5"/>
+  <line x1="485" y1="262" x2="470" y2="310" stroke="#000000" stroke-width="1.5"/>
+  <line x1="515" y1="262" x2="530" y2="310" stroke="#000000" stroke-width="1.5"/>
+  
+  <!-- Crown object -->
+  <circle cx="500" cy="85" r="35" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <path d="M 478 95 L 484 75 L 493 88 L 500 70 L 507 88 L 516 75 L 522 95 Z" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <text x="550" y="85" font-family="Inter, sans-serif" font-size="13" font-style="italic" fill="#000000">crown</text>
+  <!-- OnHead relation -->
+  <line x1="500" y1="120" x2="500" y2="168" stroke="#000000" stroke-width="1.5"/>
+  <polygon points="500,168 496,160 504,160" fill="#000000"/>
+  <text x="525" y="145" font-family="Inter, sans-serif" font-size="11" fill="#000000">on head</text>
+  
+  <!-- John Left Leg function object -->
+  <ellipse cx="610" cy="385" rx="30" ry="20" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <path d="M 600 375 L 610 395 L 622 390" stroke="#000000" stroke-width="1.5" fill="none"/>
+  <!-- Arrow function LeftLeg(John) -->
+  <line x1="550" y1="320" x2="590" y2="370" stroke="#000000" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <polygon points="590,370 582,366 590,360" fill="#000000"/>
+  <text x="600" y="340" font-family="Inter, sans-serif" font-size="11" fill="#000000">left leg</text>
+  
+  <!-- Binary relation: Brother -->
+  <path d="M 290 190 Q 365 165 440 190" stroke="#000000" stroke-width="1.5" fill="none"/>
+  <polygon points="440,190 432,185 435,195" fill="#000000"/>
+  <text x="365" y="170" font-family="Inter, sans-serif" font-size="11" text-anchor="middle" fill="#000000">brother</text>
+  
+  <path d="M 440 215 Q 365 240 290 215" stroke="#000000" stroke-width="1.5" fill="none"/>
+  <polygon points="290,215 298,220 295,210" fill="#000000"/>
+  <text x="365" y="245" font-family="Inter, sans-serif" font-size="11" text-anchor="middle" fill="#000000">brother</text>
+  
+  <text x="375" y="415" font-family="Inter, sans-serif" font-size="11" text-anchor="middle" fill="#444444">Domain Elements: {Richard, King John, Crown, Leg_R, Leg_J} | Binary Relations: {brother, on head} | Unary Relations: {person, king, crown}</text>
+</svg>

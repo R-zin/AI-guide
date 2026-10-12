@@ -1,0 +1,228 @@
+{
+  "courseTitle": "Artificial Intelligence: Knowledge Representation & Reasoning",
+  "subject": "Artificial Intelligence",
+  "sourceFiles": [
+    {
+      "filename": "Expert System.pdf",
+      "type": "PDF",
+      "totalPages": 17,
+      "topic": "Expert Systems Fundamentals, Architecture, and Applications"
+    },
+    {
+      "filename": "2.4 Predicate logic - Copy.pptx",
+      "type": "PPTX",
+      "totalSlides": 70,
+      "topic": "First-Order Predicate Logic, Inference Rules, CNF, and Resolution Refutation"
+    },
+    {
+      "filename": "3.5 Fuzzy Inference - Mamdani Style.pptx",
+      "type": "PPTX",
+      "totalSlides": 30,
+      "topic": "Fuzzy Sets, Membership Functions, and Mamdani Fuzzy Inference"
+    },
+    {
+      "filename": "3.6- Fuzzy Inference - Sugeno Style.pptx",
+      "type": "PPTX",
+      "totalSlides": 9,
+      "topic": "Sugeno Fuzzy Inference and Singleton Defuzzification"
+    },
+    {
+      "filename": "Sugeno_Fan_Speed_Solution.pptx",
+      "type": "PPTX",
+      "totalSlides": 8,
+      "topic": "Sugeno Fan Speed Controller Worked Exercise & Solution"
+    }
+  ],
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "slug": "expert-systems",
+      "title": "Expert Systems Fundamentals & Architecture",
+      "source": "Expert System.pdf",
+      "sourceRange": "PDF pp. 1\u201317",
+      "slideOrPageRange": "1-17",
+      "subtopics": [
+        "Definition and Core Equation (Inference Engine + Knowledge Base)",
+        "Why Use Expert Systems & Comparison with Human Experts",
+        "Early Milestone Systems (DENDRAL & MYCIN)",
+        "Modern Variants (Rule-based, Fuzzy, Neural, Neuro-fuzzy)",
+        "General Structure (Knowledge Base, Database, Inference Engine)",
+        "Key Components & User Interface Interactions",
+        "Participants in System Design (Domain Expert, Knowledge Engineer, Programmer, User)",
+        "Explanation Facilities (WHY and HOW queries)",
+        "Conventional Systems vs Expert Systems Comparison",
+        "Human Experts vs Expert Systems Comparison",
+        "Application Domains across Industries",
+        "Limitations and Brittleness of Expert Systems"
+      ],
+      "diagrams": [
+        {
+          "id": "es-components",
+          "title": "Expert System Components and Information Flow",
+          "sourceRef": "PDF p. 9",
+          "originalImage": "/diagrams/es-components-original.png",
+          "svgImage": "/diagrams/es-components.svg",
+          "caption": "Figure 1.1: Architecture of an Expert System showing User Interface, Knowledge Base, and Inference Engine."
+        },
+        {
+          "id": "es-architecture-roles",
+          "title": "Participants and Architecture in Expert System Design",
+          "sourceRef": "PDF p. 11",
+          "originalImage": "/diagrams/es-architecture-roles-original.png",
+          "svgImage": "/diagrams/es-architecture-roles.svg",
+          "caption": "Figure 1.2: System participants (Domain Expert, Knowledge Engineer, Programmer, User) and interactions with working storage and inference engine."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "slug": "predicate-logic-foundations",
+      "title": "First-Order Predicate Logic & Knowledge Representation",
+      "source": "2.4 Predicate logic - Copy.pptx",
+      "sourceRange": "Slides 1\u201329",
+      "slideOrPageRange": "1-29",
+      "subtopics": [
+        "Limitations of Propositional Logic Expressiveness",
+        "Ontology of FOL: Objects, Relations, and Functions",
+        "Formal Semantics and Models of First-Order Logic",
+        "Syntax of FOL: Constants, Predicates, Functions, Variables, Connectives",
+        "Terms and Atomic Sentences",
+        "Complex Sentences and Truth Conditions",
+        "Universal Quantifier (\u2200) and Existential Quantifier (\u2203)",
+        "Quantifier Duality and Generalized De Morgan's Laws",
+        "Formal Translation of Natural Language into Predicate Logic",
+        "Nested Quantifiers and Scope Order"
+      ],
+      "diagrams": [
+        {
+          "id": "fol-model-domain",
+          "title": "First-Order Logic Domain Model with Objects, Relations, and Functions",
+          "sourceRef": "Slide 10",
+          "originalImage": "/diagrams/fol-model-domain-original.png",
+          "svgImage": "/diagrams/fol-model-domain.svg",
+          "caption": "Figure 2.1: Formal model containing 5 objects (Richard, King John, crown, left legs), binary relations (brother, on head), unary properties (person, king, crown), and unary function (left leg)."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 3,
+      "slug": "inference-and-resolution",
+      "title": "Inference, Resolution Refutation & Logic Programming",
+      "source": "2.4 Predicate logic - Copy.pptx",
+      "sourceRange": "Slides 30\u201370",
+      "slideOrPageRange": "30-70",
+      "subtopics": [
+        "Propositional Inference Rules (Modus Ponens, Modus Tollens, And/Or Rules)",
+        "First-Order Quantifier Inference Rules (\u2200-Elim, \u2200-Intro, \u2203-Intro, \u2203-Elim)",
+        "Step-by-Step Proof: The Richard Criminal Problem",
+        "Literals, Clauses, and Conjunctive Normal Form (CNF)",
+        "4-Step Algorithm for CNF Conversion",
+        "Resolution Refutation in Propositional Logic",
+        "Soundness and Completeness of Resolution",
+        "9-Step Conversion of First-Order Sentences to Clause Form",
+        "Skolemization: Skolem Constants vs Skolem Functions",
+        "Worked Resolution Proof: Socrates is Mortal",
+        "Applications: Automated Theorem Proving, AI Knowledge Bases",
+        "Prolog and Horn Clauses (Facts, Rules, Queries)"
+      ],
+      "diagrams": [
+        {
+          "id": "resolution-refutation-tree",
+          "title": "Resolution Refutation Tree Deriving Empty Clause",
+          "sourceRef": "Slide 51",
+          "originalImage": "/diagrams/resolution-refutation-tree-original.png",
+          "svgImage": "/diagrams/resolution-refutation-tree.svg",
+          "caption": "Figure 3.1: Resolution refutation tree demonstrating derivation of the empty clause (contradiction) from negated query."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 4,
+      "slug": "mamdani-fuzzy-inference",
+      "title": "Mamdani Fuzzy Inference Systems",
+      "source": "3.5 Fuzzy Inference - Mamdani Style.pptx",
+      "sourceRange": "Slides 1\u201330",
+      "slideOrPageRange": "1-30",
+      "subtopics": [
+        "Fuzzy Logic Foundations: Crisp Sets vs Fuzzy Sets",
+        "Linguistic Variables and Linguistic Values",
+        "Characteristics of Membership Functions (Support, Core, \u03b1-Cut, Height)",
+        "Membership Function Shapes: Triangular, Trapezoidal, Gaussian, Singleton",
+        "Mathematical Formulations of Triangular and Trapezoidal MFs",
+        "The 4-Step Mamdani Process Architecture",
+        "Step 1: Fuzzification (Worked Example: Project Risk)",
+        "Step 2: Rule Evaluation with Fuzzy Conjunction (min) and Disjunction (max)",
+        "Consequent Modification: Slicing/Clipping vs Scaling",
+        "Step 3: Consequent Aggregation via Union Operator",
+        "Step 4: Defuzzification via Centroid / Center of Gravity (COG)",
+        "Discrete Sample Calculation Formula for COG"
+      ],
+      "diagrams": [
+        {
+          "id": "mamdani-4step-flow",
+          "title": "Mamdani 4-Step Fuzzy Inference Process",
+          "sourceRef": "Slide 5",
+          "originalImage": "/diagrams/mamdani-4step-flow-original.png",
+          "svgImage": "/diagrams/mamdani-4step-flow.svg",
+          "caption": "Figure 4.1: Flowchart of Mamdani inference from crisp inputs through fuzzification, rule evaluation, aggregation, and defuzzification."
+        },
+        {
+          "id": "membership-function-shapes",
+          "title": "Standard Membership Function Geometries",
+          "sourceRef": "Slides 9\u201311",
+          "originalImage": "",
+          "svgImage": "/diagrams/membership-function-shapes.svg",
+          "caption": "Figure 4.2: Geometric definitions of Triangular, Trapezoidal, Gaussian, and Singleton membership functions."
+        },
+        {
+          "id": "mamdani-cog-defuzzification",
+          "title": "Center of Gravity Defuzzification Sampling",
+          "sourceRef": "Slide 30",
+          "originalImage": "/diagrams/mamdani-cog-defuzzification-original.png",
+          "svgImage": "/diagrams/mamdani-cog-defuzzification.svg",
+          "caption": "Figure 4.3: Discrete sample approximation of COG over universe Z yielding crisp output 67.4%."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 5,
+      "slug": "sugeno-fuzzy-inference",
+      "title": "Sugeno Fuzzy Inference Systems & Controller Design",
+      "source": "3.6- Fuzzy Inference - Sugeno Style.pptx & Sugeno_Fan_Speed_Solution.pptx",
+      "sourceRange": "Sugeno Slides 1\u20139 & Solution Slides 1\u20138",
+      "slideOrPageRange": "Sugeno 1-9, Solution 1-8",
+      "subtopics": [
+        "Motivation: Computational Efficiency of Sugeno vs Mamdani Centroid",
+        "Zero-Order Sugeno Model: Consequent as Fuzzy Singletons (z = k)",
+        "First-Order Sugeno Model: Consequent as Mathematical Functions (z = f(x,y))",
+        "Sugeno Rule Evaluation & Singleton Aggregation",
+        "Weighted Average (WA) Defuzzification Formula",
+        "Worked 3-Rule Singleton Example (WA = 65)",
+        "Comprehensive Comparison: Mamdani vs Sugeno Trade-offs",
+        "Worked Case Study: Fan Speed Controller Design",
+        "Input MFs: Temperature [0, 40]\u00b0C and Relative Humidity [0, 100]%",
+        "Fuzzification at T = 31\u00b0C and H = 70%",
+        "5-Rule Evaluation using Min-Operator (AND)",
+        "Singleton Spike Aggregation and Weighted Average Calculation (z = 67.78%)"
+      ],
+      "diagrams": [
+        {
+          "id": "sugeno-inference-process",
+          "title": "Sugeno Singleton Rule Evaluation and Weighted Average",
+          "sourceRef": "Sugeno Slides 4\u20136",
+          "originalImage": "/diagrams/sugeno-inference-process-original.png",
+          "svgImage": "/diagrams/sugeno-inference-process.svg",
+          "caption": "Figure 5.1: Sugeno-style rule evaluation with singleton consequents and weighted average defuzzification."
+        },
+        {
+          "id": "sugeno-fan-speed-controller",
+          "title": "Sugeno Fan Speed Controller Fuzzification & Solution",
+          "sourceRef": "Solution Slides 2, 5, 7, 8",
+          "originalImage": "/diagrams/sugeno-fan-speed-controller-original.png",
+          "svgImage": "/diagrams/sugeno-fan-speed-controller.svg",
+          "caption": "Figure 5.2: Worked Fan Speed Controller case study showing temperature and humidity fuzzification curves and weighted-average calculation."
+        }
+      ]
+    }
+  ]
+}

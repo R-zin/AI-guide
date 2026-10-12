@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <rect x="220" y="40" width="360" height="320" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+  <text x="400" y="70" font-family="Inter, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#000000">EXPERT SYSTEM</text>
+  
+  <!-- User box -->
+  <rect x="40" y="160" width="100" height="80" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <text x="90" y="205" font-family="Inter, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#000000">User</text>
+  
+  <!-- UI box -->
+  <rect x="250" y="140" width="100" height="120" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <text x="300" y="195" font-family="Inter, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#000000">User</text>
+  <text x="300" y="215" font-family="Inter, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#000000">Interface</text>
+  
+  <!-- Engine container -->
+  <rect x="380" y="90" width="180" height="220" fill="#FAFAFA" stroke="#000000" stroke-width="1.5"/>
+  
+  <!-- Knowledge Base -->
+  <rect x="395" y="110" width="150" height="60" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <text x="470" y="145" font-family="Inter, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#000000">Knowledge Base</text>
+  
+  <!-- Inference Engine -->
+  <rect x="395" y="230" width="150" height="60" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <text x="470" y="265" font-family="Inter, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#000000">Inference Engine</text>
+  
+  <!-- Annotations Right -->
+  <rect x="610" y="110" width="160" height="60" fill="#E5E5E5" stroke="#000000" stroke-width="1"/>
+  <text x="690" y="135" font-family="Inter, sans-serif" font-size="11" text-anchor="middle" fill="#000000">Stores domain</text>
+  <text x="690" y="152" font-family="Inter, sans-serif" font-size="11" text-anchor="middle" fill="#000000">knowledge (facts/rules)</text>
+  
+  <rect x="610" y="230" width="160" height="60" fill="#E5E5E5" stroke="#000000" stroke-width="1"/>
+  <text x="690" y="252" font-family="Inter, sans-serif" font-size="11" text-anchor="middle" fill="#000000">Derives new knowledge</text>
+  <text x="690" y="269" font-family="Inter, sans-serif" font-size="11" text-anchor="middle" fill="#000000">from existing facts</text>
+  
+  <!-- Arrows -->
+  <!-- User to UI -->
+  <line x1="140" y1="180" x2="250" y2="180" stroke="#000000" stroke-width="1.5"/>
+  <polygon points="250,180 242,176 242,184" fill="#000000"/>
+  <text x="195" y="172" font-family="Inter, sans-serif" font-size="11" text-anchor="middle" fill="#000000">Facts</text>
+  
+  <!-- UI to User -->
+  <line x1="250" y1="220" x2="140" y2="220" stroke="#000000" stroke-width="1.5"/>
+  <polygon points="140,220 148,216 148,224" fill="#000000"/>
+  <text x="195" y="236" font-family="Inter, sans-serif" font-size="11" text-anchor="middle" fill="#000000">Expertise</text>
+  
+  <!-- UI to Inference container -->
+  <line x1="350" y1="180" x2="380" y2="180" stroke="#000000" stroke-width="1.5"/>
+  <polygon points="380,180 374,176 374,184" fill="#000000"/>
+  
+  <line x1="380" y1="220" x2="350" y2="220" stroke="#000000" stroke-width="1.5"/>
+  <polygon points="350,220 356,216 356,224" fill="#000000"/>
+  
+  <!-- KB <-> Inference Engine bidirectional -->
+  <line x1="470" y1="170" x2="470" y2="230" stroke="#000000" stroke-width="2"/>
+  <polygon points="470,170 465,178 475,178" fill="#000000"/>
+  <polygon points="470,230 465,222 475,222" fill="#000000"/>
+  
+  <!-- Annotations arrows -->
+  <line x1="610" y1="140" x2="550" y2="140" stroke="#000000" stroke-width="1.5"/>
+  <polygon points="550,140 558,136 558,144" fill="#000000"/>
+  
+  <line x1="610" y1="260" x2="550" y2="260" stroke="#000000" stroke-width="1.5"/>
+  <polygon points="550,260 558,256 558,264" fill="#000000"/>
+</svg>

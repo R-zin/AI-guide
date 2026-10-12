@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 420" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <text x="375" y="30" font-family="Inter, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#000000">ZERO-ORDER SUGENO FUZZY INFERENCE WITH SINGLETONS</text>
+  
+  <!-- Rules box -->
+  <rect x="40" y="60" width="670" height="180" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <text x="60" y="90" font-family="Inter, sans-serif" font-size="13" font-weight="bold" fill="#000000">Rule Evaluation &amp; Singleton Outputs:</text>
+  
+  <!-- Rule 1 -->
+  <text x="60" y="125" font-family="Inter, sans-serif" font-size="12" fill="#000000">Rule 1: IF x is A3 (0.0) OR y is B1 (0.1) THEN z is k&#8321; = 20</text>
+  <text x="500" y="125" font-family="JetBrains Mono, monospace" font-size="12" font-weight="bold" fill="#000000">w&#8321; = 0.1, k&#8321; = 20</text>
+  
+  <!-- Rule 2 -->
+  <text x="60" y="165" font-family="Inter, sans-serif" font-size="12" fill="#000000">Rule 2: IF x is A2 (0.2) AND y is B2 (0.7) THEN z is k&#8322; = 50</text>
+  <text x="500" y="165" font-family="JetBrains Mono, monospace" font-size="12" font-weight="bold" fill="#000000">w&#8322; = 0.2, k&#8322; = 50</text>
+  
+  <!-- Rule 3 -->
+  <text x="60" y="205" font-family="Inter, sans-serif" font-size="12" fill="#000000">Rule 3: IF x is A1 (0.5) THEN z is k&#8323; = 80</text>
+  <text x="500" y="205" font-family="JetBrains Mono, monospace" font-size="12" font-weight="bold" fill="#000000">w&#8323; = 0.5, k&#8323; = 80</text>
+  
+  <!-- Defuzzification Box -->
+  <rect x="40" y="260" width="670" height="130" fill="#FAFAFA" stroke="#000000" stroke-width="2"/>
+  <text x="60" y="290" font-family="Inter, sans-serif" font-size="13" font-weight="bold" fill="#000000">Sugeno Defuzzification: Weighted Average (WA)</text>
+  
+  <text x="60" y="325" font-family="JetBrains Mono, monospace" font-size="13" fill="#000000">WA = &#8721;(w&#7522; &#183; k&#7522;) / &#8721; w&#7522; = (w&#8321;k&#8321; + w&#8322;k&#8322; + w&#8323;k&#8323;) / (w&#8321; + w&#8322; + w&#8323;)</text>
+  <text x="60" y="355" font-family="JetBrains Mono, monospace" font-size="13" fill="#000000">   = (0.1 &#215; 20 + 0.2 &#215; 50 + 0.5 &#215; 80) / (0.1 + 0.2 + 0.5)</text>
+  <text x="60" y="380" font-family="JetBrains Mono, monospace" font-size="13" font-weight="bold" fill="#000000">   = (2 + 10 + 40) / 0.8 = 52 / 0.8 = 65</text>
+</svg>
