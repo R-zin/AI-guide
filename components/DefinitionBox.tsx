@@ -20,9 +20,9 @@ export function DefinitionBox({ definitions }: { definitions: KeyDefinitionItem[
                 {def.sourceRef}
               </span>
             </div>
-            <p className="font-sans text-sm text-gray-dark dark:text-gray-light leading-relaxed">
+            <div className="font-sans text-sm text-gray-dark dark:text-gray-light leading-relaxed">
               <FormattedText text={def.definition} />
-            </p>
+            </div>
           </div>
         ))}
       </div>

@@ -30,9 +30,9 @@ export function SolvedExampleCard({ example }: { example: SolvedExampleItem }) {
         <div className="font-mono text-xs uppercase font-bold text-gray-dark dark:text-gray-mid mb-1">
           Problem Statement
         </div>
-        <p className="font-sans text-sm text-black dark:text-white leading-relaxed whitespace-pre-line">
+        <div className="font-sans text-sm text-black dark:text-white leading-relaxed">
           <FormattedText text={example.problemStatement} />
-        </p>
+        </div>
       </div>
 
       {/* Stepped Working */}
@@ -54,9 +54,9 @@ export function SolvedExampleCard({ example }: { example: SolvedExampleItem }) {
                   {step.title}
                 </span>
               </div>
-              <p className="font-sans text-xs md:text-sm text-gray-dark dark:text-gray-light leading-relaxed pl-1">
+              <div className="font-sans text-xs md:text-sm text-gray-dark dark:text-gray-light leading-relaxed pl-1">
                 <FormattedText text={step.explanation} />
-              </p>
+              </div>
               {step.formulaOrCode && (
                 <div className="p-2.5 bg-gray-light/40 dark:bg-gray-black border border-black dark:border-white font-mono text-xs overflow-x-auto text-black dark:text-white">
                   <FormattedText text={step.formulaOrCode} />

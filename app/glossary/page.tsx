@@ -128,9 +128,9 @@ export default function GlossaryPage() {
                 </div>
               </div>
 
-              <p className="font-sans text-xs md:text-sm text-gray-dark dark:text-gray-light leading-relaxed mb-3">
+              <div className="font-sans text-xs md:text-sm text-gray-dark dark:text-gray-light leading-relaxed mb-3">
                 <FormattedText text={item.definition} />
-              </p>
+              </div>
 
               {item.relatedTerms && item.relatedTerms.length > 0 && (
                 <div className="pt-2 border-t border-gray-light dark:border-gray-dark font-mono text-[11px] text-gray-dark dark:text-gray-mid flex items-center gap-2">

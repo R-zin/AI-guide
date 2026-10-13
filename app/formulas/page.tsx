@@ -77,9 +77,9 @@ export default function FormulasPage() {
             </div>
 
             {/* Description */}
-            <p className="font-sans text-xs md:text-sm text-gray-dark dark:text-gray-light leading-relaxed mb-4">
+            <div className="font-sans text-xs md:text-sm text-gray-dark dark:text-gray-light leading-relaxed mb-4">
               <FormattedText text={f.description} />
-            </p>
+            </div>
 
             {/* Variables / Parameters Table */}
             <div className="my-4 border border-gray-light dark:border-gray-dark overflow-x-auto">

@@ -73,9 +73,9 @@ export function PracticeQuestionCard({ question }: { question: PracticeQuestionI
           </div>
           <div className="space-y-2 text-xs md:text-sm font-sans text-gray-dark dark:text-gray-light pl-2 border-l-2 border-black dark:border-l-white">
             {question.solutionSteps.map((step, sIdx) => (
-              <p key={sIdx} className="leading-relaxed">
+              <div key={sIdx} className="leading-relaxed">
                 <FormattedText text={step} />
-              </p>
+              </div>
             ))}
           </div>
 
