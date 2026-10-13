@@ -2,10 +2,17 @@
 
 import React, { useState } from "react";
 import { DiagramItem } from "../content/types";
+import { svgDiagramMap } from "../content/svgMap";
+import { getAssetPath } from "../lib/assets";
 import { Eye, EyeOff } from "lucide-react";
 
 export function DiagramViewer({ diagram }: { diagram: DiagramItem }) {
   const [showOriginal, setShowOriginal] = useState(false);
+
+  // Check if we have inline SVG content available
+  const inlineSvg = svgDiagramMap[diagram.svgPath];
+  const resolvedSvgPath = getAssetPath(diagram.svgPath);
+  const resolvedOriginalPath = diagram.originalPath ? getAssetPath(diagram.originalPath) : undefined;
 
   return (
     <figure className="my-8 border border-black dark:border-white bg-white dark:bg-black">
@@ -30,11 +37,11 @@ export function DiagramViewer({ diagram }: { diagram: DiagramItem }) {
 
       {/* Image container */}
       <div className="p-4 bg-white dark:bg-black flex justify-center items-center overflow-x-auto min-h-[220px]">
-        {showOriginal && diagram.originalPath ? (
+        {showOriginal && resolvedOriginalPath ? (
           <div className="relative max-w-full">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={diagram.originalPath}
+              src={resolvedOriginalPath}
               alt={diagram.caption}
               className="max-h-[500px] object-contain border border-gray-light dark:border-gray-dark"
             />
@@ -42,12 +49,16 @@ export function DiagramViewer({ diagram }: { diagram: DiagramItem }) {
               Original Slide Scan
             </div>
           </div>
+        ) : inlineSvg ? (
+          <div
+            className="w-full max-w-3xl flex justify-center [&>svg]:w-full [&>svg]:max-h-[500px] [&>svg]:h-auto dark:invert"
+            dangerouslySetInnerHTML={{ __html: inlineSvg }}
+          />
         ) : (
           <div className="w-full max-w-3xl flex justify-center">
-            {/* Clean SVG display - dark:invert seamlessly makes black strokes white on black */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={diagram.svgPath}
+              src={resolvedSvgPath}
               alt={diagram.caption}
               className="w-full max-h-[500px] object-contain dark:invert"
             />
